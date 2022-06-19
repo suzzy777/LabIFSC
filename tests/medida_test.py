@@ -74,6 +74,7 @@ def test_medida_si_2():
     assert unidades_em_texto(m.unidades_originais) == "m²"
 
 def test_medida_si_3():
+    m = Medida((31.5467, 0.052), 'ft^2')
     m = Medida("1+-0.1", "ft² deg lb h °F A mol^-1").SI()
 
     assert unidades_em_texto(m.unidades_originais) == "m² rad kg s K A mol⁻¹"
